@@ -1,5 +1,5 @@
 //Take in current player health
-//Ask player what he will do?
+//Ask player what they will do
 
 #include <iostream>
 #include <string>
