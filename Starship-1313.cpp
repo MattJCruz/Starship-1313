@@ -14,8 +14,8 @@ int eHealth = 10;
 int damage;
 bool playVal = true;
 void combatLoop(int i);
-string next;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    Game Flavor Text
+string nextCmd;
+//////////////////////////////////////////////////////////////////////////////////////////Game Flavor Text
 const string TEXT[3][3]=
 {
     {
@@ -26,7 +26,7 @@ A well-placed shot to the control panel will induce the tamper-protection\n\
 protocol and electrocute the alien.\n\n\n",
 
         "You make your way out of the engine room into the cargo hold. \n\
-The second alien is scrounging around in the shipping crates, \n\
+A second alien appears, different from the first, scrounging around in the shipping crates, \n\
 most likely looking for valuables. Just above it is a cargo crane \n\
 holding a heavy-looking crate. You realize you can use your datapad\n\
 to take control of the crane. \n\n\n",
@@ -68,7 +68,7 @@ int main()
     {
         system ("CLS");
         pHealth = 10;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    Intro
+//////////////////////////////////////////////////////////////////////////////////////////Intro
         cout
                 <<"You wake up in a utility closet with a welt on your forehead.\n"
                 <<"The last thing you remember is making repairs to the reactors\n"
@@ -95,7 +95,7 @@ int main()
 
         cin >> playVal;
         system ("CLS");
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    Game Loop
+//////////////////////////////////////////////////////////////////////////////////////////Game Loop
         while(playVal == true)
         {
             for (int y = 0; y<= 2; y++)
@@ -115,7 +115,7 @@ int main()
                 }
                 eHealth = 10;
                 cout << "Press a key and enter to continue." << endl;
-                cin >> next;
+                cin >> nextCmd;
                 system ("CLS");
             }
             if(pHealth>0)
@@ -131,7 +131,7 @@ int main()
     cout << "Goodbye!\n\n";
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    Combat Loop
+//////////////////////////////////////////////////////////////////////////////////////////Combat Loop
 void combatLoop(int i)//Add parameter here to print from text array in loop.
 {
     damage = rand()%3+1;//Alien and player inflict a random amount of damage on one another.
